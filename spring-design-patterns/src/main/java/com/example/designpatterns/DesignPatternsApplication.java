@@ -1,12 +1,11 @@
-package config;
+package com.example.designpatterns;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@Configuration
-public class AppConfig {
-    @Bean
-    public String appName() {
-        return "API de Pagamentos com Spring";
+@SpringBootApplication
+public class DesignPatternsApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DesignPatternsApplication.class, args);
     }
 }
