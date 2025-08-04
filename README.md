@@ -104,7 +104,6 @@ classDiagram
     OrderFacade --> PaymentService
     PaymentController --> OrderFacade
 
-
 ---
 
 ✅ **Tecnologias Utilizadas**
@@ -125,18 +124,8 @@ Spring Boot DevTools
 
 ✅ **Estrutura do Projeto**
 
-spring-design-patterns/
- ├── pom.xml
- └── src/main/java/com/example/designpatterns/
-       ├── DesignPatternsApplication.java
-       ├── config/AppConfig.java
-       ├── strategy/
-       │     ├── PaymentStrategy.java
-       │     ├── CreditCardPayment.java
-       │     ├── PixPayment.java
-       │     └── PaymentService.java
-       ├── facade/OrderFacade.java
-       └── controller/PaymentController.java
+<img width="841" height="755" alt="Screenshot_20250804-010336" src="https://github.com/user-attachments/assets/27dac971-f731-4abc-b4f4-b26ed5bbfb85" />
+
 
 
 ---
