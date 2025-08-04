@@ -1,4 +1,4 @@
-package strategy;
+package com.example.designpatterns.strategy;
 
 import org.springframework.stereotype.Component;
 
