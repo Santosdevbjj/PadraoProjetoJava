@@ -1,6 +1,6 @@
-package controller;
+package com.example.designpatterns.controller;
 
-import facade.OrderFacade;
+import com.example.designpatterns.facade.OrderFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
