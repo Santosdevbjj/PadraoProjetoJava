@@ -16,20 +16,19 @@ Esteja pronto para mostrar suas habilidades de design e programação, e não se
 
 **Design Patterns com Java e Spring Boot**
 
-✅ Descrição do Projeto
+✅ **Descrição do Projeto**
 
 Este repositório demonstra a aplicação de Padrões de Projeto (Design Patterns) utilizando:
 
-1. Java Puro
+# 1. Java Puro
 
 Padrões: Singleton, Strategy, Facade
 
 
 
-2. Spring Boot
+# 2. Spring Boot
 
 Padrões: Singleton, Strategy, Facade em uma API REST
-
 
 
 
@@ -38,119 +37,118 @@ O objetivo é mostrar a implementação prática desses padrões, tanto manualme
 
 ---
 
-✅ Padrões Utilizados
+✅ **Padrões Utilizados**
 
-Singleton
+**Singleton**
 
-Java Puro: Implementado manualmente na classe ConfigManager.
+**Java Puro:** Implementado manualmente na classe ConfigManager.
 
-Spring Boot: Implementado de forma nativa, pois os beans Spring são Singletons por padrão.
+**Spring Boot:** Implementado de forma nativa, pois os beans Spring são Singletons por padrão.
 
 
-Strategy
+**Strategy**
 
 Define uma família de algoritmos, encapsula cada um e os torna intercambiáveis.
 
-Implementações:
+**Implementações:**
 
-Java Puro: CreditCardPayment e PixPayment implementando PaymentStrategy.
+**Java Puro:** CreditCardPayment e PixPayment implementando PaymentStrategy.
 
-Spring Boot: Estratégias registradas como @Component e injetadas dinamicamente via Spring.
+**Spring Boot:** Estratégias registradas como @Component e injetadas dinamicamente via Spring.
 
 
 
-Facade
+**Facade**
 
 Fornece uma interface simplificada para interagir com subsistemas complexos.
 
-Implementação:
+**Implementação:**
 
-Java Puro: OrderFacade simplifica o uso das estratégias.
+**Java Puro:** OrderFacade simplifica o uso das estratégias.
 
-Spring Boot: OrderFacade organiza a lógica de processamento via API REST.
-
+**Spring Boot:** OrderFacade organiza a lógica de processamento via API REST.
 
 
 
 ---
 
-✅ Estrutura dos Projetos
+✅ **Estrutura dos Projetos**
 
-1. Projeto com Java Puro
+# 1. Projeto com Java Puro
 
 <img width="1080" height="1054" alt="Screenshot_20250804-020950" src="https://github.com/user-attachments/assets/67dbe7fb-116f-41b7-9eb2-52705dd9a315" />
 
 
-Classes
+**Classes**
 
-ConfigManager (Singleton): Garante uma única instância para configurações globais.
+**ConfigManager (Singleton):** Garante uma única instância para configurações globais.
 
-PaymentStrategy (Interface): Define contrato para métodos de pagamento.
+**PaymentStrategy (Interface):** Define contrato para métodos de pagamento.
 
-CreditCardPayment / PixPayment: Implementam diferentes estratégias de pagamento.
+**CreditCardPayment / PixPayment:** Implementam diferentes estratégias de pagamento.
 
-PaymentContext: Permite definir e executar uma estratégia.
+**PaymentContext:** Permite definir e executar uma estratégia.
 
-OrderFacade: Simplifica a execução de pedidos, delegando à estratégia apropriada.
+**OrderFacade:** Simplifica a execução de pedidos, delegando à estratégia apropriada.
 
-Main: Demonstra o uso dos padrões.
+**Main:** Demonstra o uso dos padrões.
 
 
 
 ---
 
-2. Projeto com Spring Boot
+# 2. Projeto com Spring Boot
 
 <img width="838" height="917" alt="Screenshot_20250804-022456" src="https://github.com/user-attachments/assets/e04d222a-ee0a-43b9-a032-2aaeedb7f0f5" />
 
 
              
-Classes
+**Classes**
 
-DesignPatternsApplication: Classe principal do Spring Boot.
+**DesignPatternsApplication:** Classe principal do Spring Boot.
 
-AppConfig (Singleton): Exemplo de Bean Singleton (@Configuration).
+**AppConfig (Singleton):** Exemplo de Bean Singleton (@Configuration).
 
-PaymentStrategy (Interface): Contrato para pagamentos.
+**PaymentStrategy (Interface):** Contrato para pagamentos.
 
-CreditCardPayment / PixPayment: Estratégias registradas com @Component.
+**CreditCardPayment / PixPayment:** Estratégias registradas com @Component.
 
-PaymentService: Injeção de estratégias via Map<String, PaymentStrategy>.
+**PaymentService:** Injeção de estratégias via Map<String, PaymentStrategy>.
 
-OrderFacade: Interface simples para processar pedidos.
+**OrderFacade:** Interface simples para processar pedidos.
 
-PaymentController: Expõe API REST para escolher estratégias via requisição.
+**PaymentController:** Expõe API REST para escolher estratégias via requisição.
 
 
 
 ---
 
-✅ Como Rodar os Projetos
+✅ **Como Rodar os Projetos**
 
-Java Puro
+# Java Puro
 
-1. Compile:
+**1. Compile:**
 
 javac Main.java
 
 
-2. Execute:
+**2. Execute:**
 
 java Main
 
 
 
-Spring Boot
+# Spring Boot
 
-1. Vá até a pasta spring-design-patterns.
+**1. Vá até a pasta spring-design-patterns.**
 
 
-2. Execute:
+**2. Execute:**
 
 mvn spring-boot:run
 
 
-3. API disponível em:
+**3. API disponível em:**
 
 http://localhost:8080
 
@@ -159,28 +157,28 @@ http://localhost:8080
 
 ---
 
-✅ Testando a API (Spring Boot)
+✅ **Testando a API (Spring Boot)**
 
-Pagamento via Cartão
+**Pagamento via Cartão**
 
-POST http://localhost:8080/payments/creditCardPayment/100
+**POST** http://localhost:8080/payments/creditCardPayment/100
 
-Resposta:
+**Resposta:**
 
 Pedido processado com sucesso: Pagamento de R$ 100.0 via Cartão de Crédito.
 
-Pagamento via Pix
+**Pagamento via Pix**
 
-POST http://localhost:8080/payments/pixPayment/250
+**POST** http://localhost:8080/payments/pixPayment/250
 
-Resposta:
+**Resposta:**
 
 Pedido processado com sucesso: Pagamento de R$ 250.0 via Pix.
 
 
 ---
 
-✅ Diagrama UML dos Padrões
+✅ **Diagrama UML dos Padrões**
 
 classDiagram
     class PaymentStrategy {
@@ -220,7 +218,7 @@ classDiagram
 
 ---
 
-✅ Próximos Passos
+✅ **Próximos Passos**
 
 Adicionar novos métodos de pagamento.
 
@@ -234,8 +232,7 @@ Adicionar Dockerfile e docker-compose.yml para rodar com contêiner.
 
 ---
 
-📌 Quer que eu agora gere os arquivos ZIP dos dois projetos (Java Puro e Spring Boot) prontos para subir no GitHub com esse README.md incluído?
-Ou prefere que eu também gere um Dockerfile de produção + atualizar docker-compose para ambiente produtivo?
+
 
 
 
