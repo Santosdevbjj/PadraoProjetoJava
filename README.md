@@ -78,18 +78,8 @@ Spring Boot: OrderFacade organiza a lógica de processamento via API REST.
 
 1. Projeto com Java Puro
 
-java-puro-design-patterns/
- ├── src/
- │    ├── singleton/
- │    │     └── ConfigManager.java
- │    ├── strategy/
- │    │     ├── PaymentStrategy.java
- │    │     ├── CreditCardPayment.java
- │    │     ├── PixPayment.java
- │    │     └── PaymentContext.java
- │    └── facade/
- │          └── OrderFacade.java
- └── Main.java
+<img width="1080" height="1054" alt="Screenshot_20250804-020950" src="https://github.com/user-attachments/assets/67dbe7fb-116f-41b7-9eb2-52705dd9a315" />
+
 
 Classes
 
@@ -111,22 +101,10 @@ Main: Demonstra o uso dos padrões.
 
 2. Projeto com Spring Boot
 
-spring-design-patterns/
- ├── pom.xml
- └── src/main/java/com/example/designpatterns/
-       ├── DesignPatternsApplication.java
-       ├── config/
-       │     └── AppConfig.java
-       ├── strategy/
-       │     ├── PaymentStrategy.java
-       │     ├── CreditCardPayment.java
-       │     ├── PixPayment.java
-       │     └── PaymentService.java
-       ├── facade/
-       │     └── OrderFacade.java
-       └── controller/
-             └── PaymentController.java
+<img width="838" height="917" alt="Screenshot_20250804-022456" src="https://github.com/user-attachments/assets/e04d222a-ee0a-43b9-a032-2aaeedb7f0f5" />
 
+
+             
 Classes
 
 DesignPatternsApplication: Classe principal do Spring Boot.
